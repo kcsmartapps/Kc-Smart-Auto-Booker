@@ -1,96 +1,244 @@
+ Here's a single-page website template for KC Relay Auto Booker with a black theme, pricing, and features:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Page</title>
-  <meta name="description" content="A personal website hosted on GitHub Pages.">
-  <meta name="author" content="Your Name">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Quick built-in styles so it looks nice even without external CSS */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-    header {
-      background: #24292f;
-      color: #fff;
-      padding: 1rem 2rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0.5rem 0 0;
-      display: flex;
-      gap: 1rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    footer {
-      background: #f1f1f1;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KC Relay Auto Booker | Automated Booking Solution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #222;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff00;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #00ff00;
+        }
+
+        .hero {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #00e600;
+        }
+
+        .features {
+            padding: 50px 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: #111;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .price-card {
+            background-color: #111;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #00ff00;
+        }
+
+        .price-card.popular {
+            border-color: #00ff00;
+            box-shadow: 0 0 15px #00ff0055;
+        }
+
+        .price-card h2 {
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #00ff00;
+        }
+
+        .footer {
+            padding: 30px;
+            text-align: center;
+            border-top: 2px solid #222;
+        }
+
+        @media (max-width: 768px) {
+            .features, .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My GitHub Page</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="logo">KC Relay Auto Booker</div>
+        <nav class="nav">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! This is where you write a friendly introduction. Share a bit about yourself, your background, or your goals.</p>
+    <section class="hero">
+        <h1>Automate Your Relay Bookings Effortlessly</h1>
+        <p>Say goodbye to manual scheduling and hello to efficient automation</p>
+        <button class="cta-button">Start Free Trial</button>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="https://github.com/yourusername/project1">Project 1</a> – Short description of your first project.</li>
-        <li><a href="https://github.com/yourusername/project2">Project 2</a> – Short description of your second project.</li>
-        <li><a href="https://github.com/yourusername/project3">Project 3</a> – Short description of your third project.</li>
-      </ul>
+    <section id="features" class="features">
+        <div class="feature-card">
+            <h3>Instant Booking</h3>
+            <p>Real-time availability checks and instant confirmations</p>
+        </div>
+        <div class="feature-card">
+            <h3>Custom Scheduling</h3>
+            <p>Flexible scheduling options tailored to your needs</p>
+        </div>
+        <div class="feature-card">
+            <h3>Auto Reminders</h3>
+            <p>Automatic SMS/email reminders for all bookings</p>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can reach me by <a href="mailto:your.email@example.com">email</a> or check out my <a href="https://github.com/yourusername">GitHub profile</a>.</p>
+    <section id="pricing" class="pricing">
+        <h2>Simple Pricing Plans</h2>
+        <div class="pricing-cards">
+            <div class="price-card">
+                <h2>Basic</h2>
+                <div class="price">$29<span>/mo</span></div>
+                <ul>
+                    <li>100 bookings/month</li>
+                    <li>Basic analytics</li>
+                    <li>Email support</li>
+                </ul>
+                <button class="cta-button">Choose Plan</button>
+            </div>
+            <div class="price-card popular">
+                <h2>Pro</h2>
+                <div class="price">$79<span>/mo</span></div>
+                <ul>
+                    <li>500 bookings/month</li>
+                    <li>Advanced analytics</li>
+                    <li>Priority support</li>
+                    <li>Custom branding</li>
+                </ul>
+                <button class="cta-button">Choose Plan</button>
+            </div>
+            <div class="price-card">
+                <h2>Enterprise</h2>
+                <div class="price">$199<span>/mo</span></div>
+                <ul>
+                    <li>Unlimited bookings</li>
+                    <li>Dedicated account manager</li>
+                    <li>API access</li>
+                    <li>Custom integration</li>
+                </ul>
+                <button class="cta-button">Contact Us</button>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2024 Your Name — Powered by GitHub Pages</p>
-  </footer>
+    <footer class="footer">
+        <p>© 2023 KC Relay Auto Booker. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+```
+
+This template includes:
+
+1. A dark theme with green accent colors
+2. Responsive design that works on mobile devices
+3. Hero section with call-to-action button
+4. Features section with three key benefits
+5. Pricing section with three tiers (Basic, Pro, Enterprise)
+6. Sticky header with navigation
+7. Hover effects and animations
+8. Clean typography and spacing
+9. Mobile-friendly layout
+
+To use this:
+1. Save it as an HTML file
+2. Open in a web browser
+3. Customize the colors, pricing, features, and text content as needed
+4. Add your own logo and additional features as required
+
+You can enhance it further by:
+- Adding actual company information
+- Including contact forms
+- Adding more interactive elements
+- Implementing a actual payment system
+- Adding testimonials section
+- Including social media links
+- Adding a FAQ section 
