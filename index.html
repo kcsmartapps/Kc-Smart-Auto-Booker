@@ -1235,6 +1235,24 @@
 
   <!-- Main JS File -->
   <script src="main.js"></script>
+  
+  <script>
+// Manual tab switching for Features
+document.querySelectorAll('.nav-tabs .nav-link').forEach(tabLink => {
+  tabLink.addEventListener('click', function (e) {
+    e.preventDefault(); // prevent weird scrolling
+    const target = this.getAttribute('data-bs-target');
+
+    // remove active classes from all tabs and contents
+    document.querySelectorAll('.nav-tabs .nav-link').forEach(link => link.classList.remove('active','show'));
+    document.querySelectorAll('.tab-pane').forEach(content => content.classList.remove('active','show'));
+
+    // activate clicked tab + target panel
+    this.classList.add('active','show');
+    document.querySelector(target).classList.add('active','show');
+  });
+});
+</script>
 
 </body>
 
