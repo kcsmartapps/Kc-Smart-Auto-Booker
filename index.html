@@ -1,213 +1,1088 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KC Relay Auto Booker | Automated Booking Solution</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Kc Smart Auto Booker</title>
+  <meta name="description" content="Relay Auto Booker and Refresher - With K.c Smart Auto Booker Work Smart Not Hard.">
+  <meta name="keywords" content="">
 
-        body {
-            background-color: #000;
-            color: #fff;
-        }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        .header {
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #222;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #00ff00;
-        }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 30px;
-            transition: color 0.3s;
-        }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-        .nav a:hover {
-            color: #00ff00;
-        }
-
-        .hero {
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-        }
-
-        .cta-button {
-            background-color: #00ff00;
-            color: #000;
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.2em;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #00e600;
-        }
-
-        .features {
-            padding: 50px 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .feature-card {
-            background-color: #111;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .pricing {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .price-card {
-            background-color: #111;
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid #00ff00;
-        }
-
-        .price-card.popular {
-            border-color: #00ff00;
-            box-shadow: 0 0 15px #00ff0055;
-        }
-
-        .price-card h2 {
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #00ff00;
-        }
-
-        .footer {
-            padding: 30px;
-            text-align: center;
-            border-top: 2px solid #222;
-        }
-
-        @media (max-width: 768px) {
-            .features, .pricing-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav {
-                display: none;
-            }
-        }
-    </style>
+  <!-- =======================================================
+  
+  ======================================================== -->
 </head>
-<body>
-    <header class="header">
-        <div class="logo">KC Relay Auto Booker</div>
-        <nav class="nav">
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h1>Automate Your Relay Bookings Effortlessly</h1>
-        <p>Say goodbye to manual scheduling and hello to efficient automation</p>
-        <button class="cta-button">Start Free Trial</button>
-    </section>
+<body class="index-page">
 
-    <section id="features" class="features">
-        <div class="feature-card">
-            <h3>Instant Booking</h3>
-            <p>Real-time availability checks and instant confirmations</p>
-        </div>
-        <div class="feature-card">
-            <h3>Custom Scheduling</h3>
-            <p>Flexible scheduling options tailored to your needs</p>
-        </div>
-        <div class="feature-card">
-            <h3>Auto Reminders</h3>
-            <p>Automatic SMS/email reminders for all bookings</p>
-        </div>
-    </section>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-    <section id="pricing" class="pricing">
-        <h2>Simple Pricing Plans</h2>
-        <div class="pricing-cards">
-            <div class="price-card">
-                <h2>Basic</h2>
-                <div class="price">$29<span>/mo</span></div>
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Kc Smart Auto Booker</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#features">Features</a></li>
+    <!--      <li><a href="#services">Services</a></li>   -->
+          <li><a href="#pricing">Pricing</a></li>
+    <!--      <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                    <li>100 bookings/month</li>
-                    <li>Basic analytics</li>
-                    <li>Email support</li>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
                 </ul>
-                <button class="cta-button">Choose Plan</button>
-            </div>
-            <div class="price-card popular">
-                <h2>Pro</h2>
-                <div class="price">$79<span>/mo</span></div>
-                <ul>
-                    <li>500 bookings/month</li>
-                    <li>Advanced analytics</li>
-                    <li>Priority support</li>
-                    <li>Custom branding</li>
-                </ul>
-                <button class="cta-button">Choose Plan</button>
-            </div>
-            <div class="price-card">
-                <h2>Enterprise</h2>
-                <div class="price">$199<span>/mo</span></div>
-                <ul>
-                    <li>Unlimited bookings</li>
-                    <li>Dedicated account manager</li>
-                    <li>API access</li>
-                    <li>Custom integration</li>
-                </ul>
-                <button class="cta-button">Contact Us</button>
-            </div>
-        </div>
-    </section>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>    -->
+		  <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-    <footer class="footer">
-        <p>© 2023 KC Relay Auto Booker. All rights reserved.</p>
-    </footer>
+      <a class="btn-getstarted" href="index.html#pricing">DOWNLOAD NOW</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <div class="company-badge mb-4">
+                <i class="bi bi-gear-fill me-2"></i>
+                With K.c Smart Auto Booker Work Smart Not Hard.
+              </div>
+
+              <h1 class="mb-4">
+                Kc Smart Auto Booker<br>
+                
+                <span class="accent-text">Amazon Relay Load Board Auto Booker & Refresher</span>
+              </h1>
+
+              <p class="mb-4 mb-md-5">
+                K.c Smart Auto Booker automates the Load Booking process on Amazon Relay Load Board, increasing your company’s profitability by booking the highest rate loads.<br>
+                Allowing you to focus on the work that matters with a set of designated additional filters to boost your productivity.<br>
+
+                The extension will provide you with filters that will help you Auto Book the optimal loads & loads that you have previously missed from Amazon Relay Load Board. 
+              </p>
+
+              <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-primary me-0 me-sm-2 mx-1">See Our Pricing</a>
+                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
+                  <i class="bi bi-play-circle me-1"></i>
+                  Play Video
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+              <img src="assets/img/kcsmart-main.png" alt="Hero Image" class="img-fluid">
+
+              <div class="customers-badge">
+                <div class="customer-avatars">
+                  <img src="assets/img/avatar-1.webp" alt="Customer 1" class="avatar">
+                  <img src="assets/img/avatar-2.webp" alt="Customer 2" class="avatar">
+                  <img src="assets/img/avatar-3.webp" alt="Customer 3" class="avatar">
+                  <img src="assets/img/avatar-4.webp" alt="Customer 4" class="avatar">
+                  <img src="assets/img/avatar-5.webp" alt="Customer 5" class="avatar">
+                  <span class="avatar more">12+</span>
+                </div>
+                <p class="mb-0 mt-2">Trusted by over 2,600 clients — and still growing every single day.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+   <!--     <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-trophy"></i>
+              </div>
+              <div class="stat-content">
+                <h4>3x Won Awards</h4>
+                <p class="mb-0">Vestibulum ante ipsum</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <div class="stat-content">
+                <h4>6.5k Faucibus</h4>
+                <p class="mb-0">Nullam quis ante</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <div class="stat-content">
+                <h4>80k Mauris</h4>
+                <p class="mb-0">Etiam sit amet orci</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <div class="stat-content">
+                <h4>6x Phasellus</h4>
+                <p class="mb-0">Vestibulum ante ipsum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>  -->
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center justify-content-between">
+
+          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+            <span class="about-meta">MORE ABOUT US</span>
+            <h2 class="about-title">Kc Smart Team :</h2>
+            <p class="about-description">At KC Smart Auto Booker, we bring technical precision and innovation to streamline logistics. Our Chrome extension is built for efficiency—automating Amazon Relay load board refreshing and booking with speed, accuracy, and reliability.<br> Developed by a team of professional tech experts, KC Smart Auto Booker eliminates wasted time, reduces manual effort, and empowers carriers to secure loads faster than ever.<br> We don’t just build tools—we engineer smarter ways to work.</p>
+
+        <!--    <div class="row feature-list-wrapper">
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i> Smartest Extension</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Blazing Fast</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Sed do eiusmod tempor</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i> Incididunt ut labore et</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Dolore magna aliqua</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Ut enim ad minim veniam</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="info-wrapper">
+              <div class="row gy-4">
+                <div class="col-lg-5">
+                  <div class="profile d-flex align-items-center gap-3">
+                    <img src="assets/img/avatar-1.webp" alt="CEO Profile" class="profile-image">
+                    <div>
+                      <h4 class="profile-name">Mario Smith</h4>
+                      <p class="profile-position">CEO &amp; Founder</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="contact-info d-flex align-items-center gap-2">
+                    <i class="bi bi-telephone-fill"></i>
+                    <div>
+                      <p class="contact-label">Call us anytime</p>
+                      <p class="contact-number">+123 456-789</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>     -->
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="image-wrapper">
+              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                <img src="assets/img/about-5.webp" alt="Business Meeting" class="img-fluid main-image rounded-4">
+                <img src="assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
+              </div>
+              <div class="experience-badge floating">
+                <h3>10+ <span>Years</span></h3>
+                <p>Of experience in app development service</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <p>Powerful features that put you in control</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="d-flex justify-content-center">
+
+          <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                <h4>ALERT MODE</h4>
+              </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                <h4>SEARCH MODE</h4>
+              </a><!-- End tab nav item -->
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                <h4>AUTO BOOK MODE</h4>
+              </a>
+            </li><!-- End tab nav item -->
+
+          </ul>
+
+        </div>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="features-tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>ALERT MODE</h3>
+                <p class="fst-italic">
+                  The main features of ALERT MODE include the followings :
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>New Load Alert : Get notifications audibly and visually when new load become available.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Price Change Alert :  Get notifications audibly and visually when the price of a Load changes.</span></li>
+                 
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-illustration-1.webp" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane fade" id="features-tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>SEARCH MODE</h3>
+                <p class="fst-italic">
+                  The main features of SEARCH MODE include the followings :
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Search : Get notifications audibly and visually when your search filter criteria met.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span> Flexible Filters : Distance From-To, Stem Time, Deadhead, Max Departure Date & Time, Max stops.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span> Locations Filter : Where you can Include or exclude required locations. </span></li>
+                 
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-illustration-2.webp" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane fade" id="features-tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>AUTO BOOK</h3>
+				<p class="fst-italic">
+                  The main features of AUTO BOOK MODE include the followings :
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Auto Book : Automatically book loads in a lightening speed.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Flexible Filters : Distance From-To, Stem Time, Deadhead, Max Departure Date & Time, Max stops.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span> Locations Filter : Where you can Include or exclude required locations.</span></li>
+                </ul>
+                <p class="fst-italic">
+                  Other features include : <br>
+				  
+				  Refresh Rate : Auto-Refresh Load Board with fully adjustable refresh rate speeds with all new randomizer feature.<br>
+				  Auto Expand : Allow you to see the load details by automatically expanding the trip once the load found.<br>
+				  Fast Book : Allow you to book loads with just one click.<br>
+				  Notifications : Get notifications audibly and visually on every available MODES.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-illustration-3.webp" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Features Cards Section -->
+    <section id="features-cards" class="features-cards section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box orange">
+              <i class="bi bi-award"></i>
+              <h4>Smart</h4>
+              <p>Our extension is the smartest one out there.</p>
+            </div>
+          </div><!-- End Feature Borx-->
+
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box blue">
+              <i class="bi bi-patch-check"></i>
+              <h4>Fast</h4>
+              <p>Our extension is the fastest out there.</p>
+            </div>
+          </div><!-- End Feature Borx-->
+
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box green">
+              <i class="bi bi-sunrise"></i>
+              <h4>Reliable</h4>
+              <p>Our extension is the most reliable out there.</p>
+            </div>
+          </div><!-- End Feature Borx-->
+
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box red">
+              <i class="bi bi-shield-check"></i>
+              <h4>Safe</h4>
+              <p>Our extension is the safest out there.</p>
+            </div>
+          </div><!-- End Feature Borx-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Cards Section -->
+
+    <!-- Features 2 Section -->
+    <section id="features-2" class="features-2 section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-4">
+
+            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>Use On Any Device</h3>
+                  <p>Our extension can be used for both PC and Android Devices.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-display"></i>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+
+            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>Simple User Interface</h3>
+                  <p>Our extension offers the easiest and most user-friendly interface.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-feather"></i>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+
+            <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>Safe Mode</h3>
+                  <p>It hides all filters and unnecessary elements, allowing you to focus on loads without distractions.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-eye"></i>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="phone-mockup text-center">
+              <img src="assets/img/phone-app-screen.png" alt="Phone Mockup" class="img-fluid">
+            </div>
+          </div><!-- End Phone Mockup -->
+
+          <div class="col-lg-4">
+
+            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-code-square"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Regular Updates</h3>
+                  <p>We regularly update our extension with new features and improvements to make your work easier.</p>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+
+            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-phone"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Fully Responsive</h3>
+                  <p>Our extension has a responsive design that adapts seamlessly to both PC and Android devices.</p>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+
+            <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-browser-chrome"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Browser Compatibility</h3>
+                  <p>Our extension is compatible with Chrome Browser on PC and KIWI Browser on Android devices.</p>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Features 2 Section -->
+
+    <!-- Call To Action Section -->
+    <!-- /Call To Action Section -->
+
+    <!-- Clients Section -->
+   <!-- /Clients Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Here’s what our clients have to say about their success with our extension.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Marcus Reed</h3>
+              <h4>Fleet Owner</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>KC Smart Auto Booker changed the way I book loads on Amazon Relay. What used to take hours of refreshing now happens automatically, giving me back precious time to focus on driving and running my business.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Angela Cortez</h3>
+              <h4>Independent Dispatcher</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>The extension is unbelievably efficient. Loads that I used to miss now get booked in seconds. It feels like having a personal assistant who never sleeps and never blinks.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jasmine Walker</h3>
+              <h4>Contract Driver</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>I was skeptical of automation tools, but this one is the real deal. Safe, smooth, and incredibly reliable. Instead of wasting time staring at a screen, I can finally breathe easy knowing it’s working for me.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>David Thompson</h3>
+              <h4>Owner-Operator</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>As a small trucking company, every load counts. KC Smart Auto Booker keeps us competitive by grabbing loads faster and smarter than I ever could manually. It pays for itself in no time.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="2600" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="2000" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Developers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <!-- /Services Section -->
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Choose the extension that powers your workflow :</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- Basic Plan -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-card">
+              <center><h3>Kc Smart Auto Booker</h3>
+			  <h3>(LITE Version)</h3></center>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">55</span>
+                <span class="period">/ month</span>
+              </div>
+              <p class="description">Get the essentials of smart load booking in one lightweight package.</p>
+
+              <h4>Featured Included:</h4>
+              <ul class="features-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Refresh Rate : Auto-Refresh Load Board with fully adjustable refresh rate speeds with all new randomizer feature.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                 New Load Alert : Get notifications audibly and visually when new load become available.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Price Change Alert :  Get notifications audibly and visually when the price of a Load changes.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  User Interface : Very modern and Simple to use Interface.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Regular Updates : We regularly update our extension software by adding new features and improvement to make your work easier.
+
+                </li>
+              </ul>
+
+              <a href="https://chromewebstore.google.com/detail/kc-smart-auto-booker-lite/mnpfiedhgefgooencbngdkjoelahdnpp?hl=en" class="btn btn-primary">
+                Download
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Standard Plan -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-card popular">
+              <div class="popular-badge">Most Popular</div>
+             <center> <h3>Kc Smart Auto Booker</h3>
+			  <h3>(PRO Version)</h3></center>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">100</span>
+                <span class="period">/ month</span>
+              </div>
+              <p class="description">Automates the Amazon Relay load booking process so you can focus on driving, not constant refreshing.</p>
+
+              <h4>Featured Included:</h4>
+              <ul class="features-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  3 Modes – Switch between modes to match your needs.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                   Smart Refresh – Adjustable refresh speeds with randomizer.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Auto Expand – Instantly view trip details.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Fast Book – One-click load booking.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                   Notifications – Audible + visual alerts in all modes.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Advanced Filters – Stem time, distance, stops, departure, deadhead.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                   Location Filters – Include or exclude specific areas.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                   Auto Book – Lightning-fast auto booking.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                   Easy Interface – Modern, intuitive design.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                   Global Support – Works in US, UK, EU, IN, & CA.
+                </li>
+				<li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Regular Updates – Constant improvements & new features.
+                </li>
+              </ul>
+
+              <a href="https://chromewebstore.google.com/detail/kc-smart-auto-booker-pro/phacdgijkomhecbgeheemndmhlehdeip?hl=en" class="btn btn-light">
+                Download
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="pricing-card">
+              <center><h3>Kc Smart Post Truck Manager</h3></center>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">45</span>
+                <span class="period">/ month</span>
+              </div>
+              <p class="description">You can easily and seamlessly manage your post trucks in bulks with only a single click.</p>
+
+              <h4>Featured Included:</h4>
+              <ul class="features-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Create Orders Fast – Auto-generate trips with details, assign drivers, and set rates.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Post-a-Truck Made Easy – Instantly grab trips despite booking limits.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Smart Order Control – Delete, transfer, or duplicate multiple orders at once.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Works With Any Tool – 100% compatible with any Kc Smart Auto-Bookers.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Always Improving – Frequent updates with new features & enhancements.
+                </li>
+              </ul>
+
+              <a href="https://chromewebstore.google.com/detail/kc-smart-post-truck-manag/cpejoephbbhlohkjmoeicaaebghahmdb?hl=en" class="btn btn-primary">
+                Download
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Pricing Section -->
+
+    <!-- Faq Section -->
+    <section class="faq-9 faq section light-background" id="faq">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5" data-aos="fade-up">
+            <h2 class="faq-title">Have a question? Check out the FAQ</h2>
+            <p class="faq-description"> </p>
+            <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>What exactly is KC Smart Auto Booker?</h3>
+                <div class="faq-content">
+                  <p>It’s a Chrome extension built to automate your work on the Amazon Relay load board. Instead of manually refreshing and booking for hours, the tool does it for you — helping you capture better-paying loads with far less effort.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Why should I use this tool?</h3>
+                <div class="faq-content">
+                  <p>Because it saves you time and maximizes your chances of success. We’re active Amazon Relay users ourselves, so we know the struggle of missing good loads. That’s why KC Smart Auto Booker is designed with real drivers and dispatchers in mind, and updated regularly to keep it reliable and effective.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How fast can I get started?</h3>
+                <div class="faq-content">
+                  <p>Immediately. Download the extension, follow the quick install steps, and you’ll be ready to go within minutes.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What’s the installation process like?</h3>
+                <div class="faq-content">
+                  <p>The setup is simple — once you download, you’ll see clear instructions.If you ever get stuck, our support team will happily sort things out for you.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Can I use the extension on more than one device?</h3>
+                <div class="faq-content">
+                  <p>NO. You can install it on a single computers or android device.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Does it work on phones or tablets?</h3>
+                <div class="faq-content">
+                  <p>Yes , our extensions works on both PC using (CHROME BROWSER) and Android devices using (KIWI BROWSER).</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+			  
+			  <div class="faq-item">
+                <h3>Is there any risk of getting banned on Amazon Relay?</h3>
+                <div class="faq-content">
+                  <p>We’ve added features like Safe Mode and smart randomization to minimize risk and keep your account safe. While Amazon may issue warnings if it notices unusual activity, our users rarely face issues — and so far the track record for bans is essentially zero.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+			  
+			  <div class="faq-item">
+                <h3>Is billing monthly or yearly?</h3>
+                <div class="faq-content">
+                  <p>All subscriptions are billed monthly — no annual contract required.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+			  
+			  <div class="faq-item">
+                <h3>How does renewal work?</h3>
+                <div class="faq-content">
+                  <p>Subscriptions renew automatically each month, so there’s nothing extra you need to do. If you’d like to manage your payments, you can view or adjust everything directly from your account dashboard.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+			  
+			  <div class="faq-item">
+                <h3>Can I use one subscription across multiple companies?</h3>
+                <div class="faq-content">
+                  <p>No. Each subscription is tied to a single company. If you’re running more than one business, you’ll need a separate subscription for each.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+			  
+			   <div class="faq-item">
+                <h3>How do I cancel my subscription?</h3>
+                <div class="faq-content">
+                  <p>Log into your account,Go to the Manage Subscription,Select the subscription you wish to end,Click Cancel.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+			  
+			   <div class="faq-item">
+                <h3>Do you offer refunds?</h3>
+                <div class="faq-content">
+                  <p>No — all sales are final, and payments are non‑refundable.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+			  
+			   
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Faq Section -->
+
+    <!-- Call To Action 2 Section -->
+    <section id="call-to-action-2" class="call-to-action-2 section dark-background">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>With Kc Smart Auto Booker . . . Work Smart Not Hard</h3>
+              <p>Automate Your Load Booking Today</p>
+              <a class="cta-btn" href="#pricing">DOWNLOAD NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action 2 Section --> 
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      
+
+    <center>      <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              
+
+             
+    <iframe
+      id="JotFormIFrame-252378902218157"
+      title="Kc Smart - Contact Us"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen; payment"
+      src="https://form.jotform.com/252378902218157"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:539px;border:none;"
+      scrolling="no"
+    >
+    </iframe>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252378902218157']", "https://form.jotform.com/")</script>
+    
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section --> </center>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Kc Smart Auto Booker</span>
+          </a>
+          
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.youtube.com/@k.csmartautobooker3802"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100085289341791"><i class="bi bi-facebook"></i></a>
+            
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+           
+            <li><a href="terms.html">Terms of service</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+          </ul>
+        </div>
+
+ <!--       <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Hic solutasetp</h4>
+          <ul>
+            <li><a href="#">Molestiae accusamus iure</a></li>
+            <li><a href="#">Excepturi dignissimos</a></li>
+            <li><a href="#">Suscipit distinctio</a></li>
+            <li><a href="#">Dilecta</a></li>
+            <li><a href="#">Sit quas consectetur</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nobis illum</h4>
+          <ul>
+            <li><a href="#">Ipsam</a></li>
+            <li><a href="#">Laudantium dolorum</a></li>
+            <li><a href="#">Dinera</a></li>
+            <li><a href="#">Trodelas</a></li>
+            <li><a href="#">Flexo</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>   -->
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Kc Smart Auto Booker</strong> <span>All Rights Reserved.</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="#pricing">Kc Smart Team</a> 
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
